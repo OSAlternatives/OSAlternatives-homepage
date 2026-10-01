@@ -1,19 +1,26 @@
 document.body.style.display=none;
-function GenerateHtmlFrom(file.name,file.type)
+function ParseMd(file.name)
 {
-    if(!fetch(file.name))
+    for();//Note This function will be defined in future
+}
+function GenerateHtmlFrom(const FileName=file.name,const FileType=file.type)
+{
+    if(!fetch(FileName))
     {
-        console.log(file.name"does not exist");
+        console.log(FileName"does not exist");
     }
     else if(file.size>1024*1024)
     {
         console.log("file exceeds size limit");
     }
-    else if(file.type!=SupportedFileTypes)
+    else if(FileType!=SupportedFileTypes)
     {
         console.log("File type invalid or unsupported") 
     else
     {//load and parse file
-        //TODO:implement loading and parsing files
+        if(FileType==md)
+        {
+            ParseMd(Filename);
+        }
     }
 }
